@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f44f93d20f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="container">
+        <div class="tools">
+            <div class="shapes">
+                <h3>Shapes</h3>
+                <h4 id="rectangle" class="option tool"><img width="20px" src="rectangle.png" alt="rectangle"> Rectangle</h4>
+                <h4 id="circle" class="option tool"><img width="20px" src="https://static.vecteezy.com/system/resources/previews/001/192/291/original/circle-png.png" alt="circle"> Circle</h4>
+                <h4 id="triangle" class="option tool"><img width="20px" src="https://pngimg.com/d/triangle_PNG109.png" alt="Triangle">Triangle</h4>
+                <li class="option">
+                    <input type="checkbox" id="fill-color">
+                    <label for="fill-color">Fill color</label>
+                  </li>
+            </div>
+            <div class="options">
+                <h3>Options</h3>
+                <h4 id="brush" class="option active tool"><i class="fa-solid fa-brush"></i>Brush</h4>
+                <h4 id="eraser" class="option tool"><i class="fa-solid fa-eraser"></i>Eraser</h4>
+                <div class="slider">
+                    <input type="range" value="30" id="slider">
+                    <progress min="0" max="100" id="progress-bar" value="30"></progress>
+                </div>
+                <h3 id="colors-tag">Colors</h3>
+                <div id="color-options">
+                    <div class="circle" id="white"></div>
+                    <div class="circle" id="black"></div>
+                    <div class="circle selected" id="red"></div>
+                    <div class="circle" id="green"></div>
+                    <div class="circle" id="blue"><input class="circle" type="color" id="color-picker" value="#4089e2"></div>
+                    
+                </div>
+                <div class="buttons">
+                    <button id="clear">Clear Board</button>
+                    <button id="saveimage">Save As Image</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="dashboard">
+            <canvas></canvas>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
