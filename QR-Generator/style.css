@@ -1,0 +1,104 @@
+@import url('https://fonts.cdnfonts.com/css/roboto-condensed');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #7A3E3E, #482121);
+    height: 100vh;
+}
+
+.container{
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+}
+
+.container p{
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.container input{
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #00000044;
+    border-radius: 20px;
+    width: 210px;
+    height: 40px;
+    padding: 10px 40px 10px 20px;
+    margin-bottom: 10px;
+}
+
+.container .generate{
+    position: absolute;
+    right: 35px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 5px 20px;
+    outline: none;
+    border: none;
+    background: #7A3E3E;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.container .generate:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.container .generate:active{
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+#imgBox{
+    width: 200px;
+    max-height: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#imgBox #QRImage{
+    width: 100%;
+    padding: 10px;
+}
+
+#imgBox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+
+.error, .error::placeholder{
+    animation: shake 0.1s linear 10;
+    color: #ff0000;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
